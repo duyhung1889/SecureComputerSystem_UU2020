@@ -16,7 +16,7 @@ def test2(filename):
 	f.close()
 
 def test3(filename):
-	f = open(filename, "r")
+	f = open(filename, "w")
 	mess = input("Enter input data: ")
 	os.remove(filename)
 	f.write(mess)
