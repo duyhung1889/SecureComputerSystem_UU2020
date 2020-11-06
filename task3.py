@@ -3,11 +3,10 @@ import math
 
 file = open("words")
 content = file.read().splitlines()
-
+nr_words = len(content)
 
 def random_password():
     val = int(input("Welcome to the XKCD random password generator, how many words do you want?  "))
-    nr_words = len(content)
     i = 1
     full_psw = ""
     total_len = 0
@@ -27,7 +26,24 @@ def random_password():
     
         
  
+def desired_entropy():
+    value = float(input("what entropy do you want: "))
+    help = math.log(nr_words, 2)
+    amount_words = math.ceil(value / help)
+    amount = value/help
+
+    full_psw = ""
+    
+    for password in range(int(amount_words)):
+        password = random.choice(content)
+        full_psw += password + " "
+    
+    print("For the entropy", value, "i suggest the password: ", full_psw)
+   
+    
+
+desired_entropy()
+#random_password()
 
 
 
-random_password()
