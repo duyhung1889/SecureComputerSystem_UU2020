@@ -5,6 +5,7 @@ Group 6
 Student Names: Nike Hiller, Hung Trinh, Bipin Patel, Sanna Regnéll
 
 This file is part of course Secure Computer Systems I at Uppsala University, Sweden.
+python 3.6.9
 '''
 import random
 import math
