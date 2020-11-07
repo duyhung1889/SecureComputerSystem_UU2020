@@ -56,7 +56,7 @@ def desired_entropy():
 
     
 random_password()
-#desired_entropy()
+desired_entropy()
 
 
 
